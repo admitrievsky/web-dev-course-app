@@ -8,5 +8,12 @@
 
   <body>
       <p>Hello, {{ name }}!</p>
+
+      <p>The products we have available are:</p>
+      <ul>
+        {% for product in products %}
+          <li>{{ product.name }} - ${{ product.price }}</li>
+        {% endfor %}
+      </ul>
   </body>
 </html>
