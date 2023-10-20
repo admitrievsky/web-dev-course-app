@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>
-        Online Store
-    </title>
-  </head>
+{% extends "base.html" %}
 
-  <body>
-      <p>Hello, {{ name }}!</p>
+{% block content %}
+  <p>Hello, {{ name }}!</p>
 
-      <p>The products we have available are:</p>
-      <ul>
-        {% for product in products %}
-          <li>{{ product.name }} - ${{ product.price }}</li>
-        {% endfor %}
-      </ul>
-  </body>
-</html>
+  <p>The products we have available are:</p>
+  <ul>
+    {% for product in products %}
+      <li>{{ product.name }} - ${{ product.price }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
