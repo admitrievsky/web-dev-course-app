@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
+def index():
     name = request.args.get('name', 'World')
     product_list = [
         {'name': 'iPhone', 'price': 999.99},
