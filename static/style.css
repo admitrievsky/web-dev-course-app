@@ -1,5 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+html {
+  height: 100%;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: flex;
+  background-color: #f5e5f8;
+  box-shadow: 0 -1px 6px #222;
+}
+
+header > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+}
+
+header > nav > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+header > nav > ul > li {
+  list-style-type: none;
+  padding: 10px 30px;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: #222;
+}
+
+header > nav > ul > li > a:hover {
+  color: #999;
+}
+
+header > h1 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 30px;
+  font-weight: 500;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 800px;
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+footer {
+  background-color: #f5e5f8;
+  box-shadow: 0 1px 6px #222;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header > h1 {
+    margin: 10px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

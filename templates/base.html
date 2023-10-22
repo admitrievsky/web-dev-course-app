@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>{% block title %}Online Store{% endblock %}</title>
+    <link href="static/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
@@ -14,9 +16,11 @@
       </nav>
       <h1>Online Store</h1>
     </header>
-    <main>
-      {% block content %}{% endblock %}
-    </main>
+    <div class="main-wrapper">
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+    </div>
     <footer>
       <p>Thanks for visiting our store!</p>
     </footer>
