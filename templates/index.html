@@ -1,19 +1,12 @@
 {% extends "base.html" %}
-
+ 
 {% block content %}
-  <p>Hello, {{ name }}!</p>
+      <p>Hello, {{ name }}!</p>   
 
-  <p>The products we have available are:</p>
-  <ul>
-    {% for product in products %}
-      <li>
-        {{ product.name }} - ${{ product.price }}
-        <button
-          class="add-to-cart"
-          title="Add to cart"
-          data-product-name="{{ product.name }}"
-        >+</button>
-      </li>
-    {% endfor %}
-  </ul>
+      <p>The products we have available are:</p>
+      <ul>
+        {% for product in products %}
+          <li>{{ product.name }} - ${{ product.price }}</li>
+          {% endfor %}
+      </ul>
 {% endblock %}

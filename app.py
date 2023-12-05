@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import request, render_template, Flask
 
 app = Flask(__name__)
 
@@ -9,9 +9,8 @@ def index():
     product_list = [
         {'name': 'iPhone', 'price': 999.99},
         {'name': 'Samsung Galaxy', 'price': 899.99},
-        {'name': 'Google Pixel', 'price': 699.99},
+        {'name': 'Google Pixel', 'price': 699.99}
     ]
-
     return render_template('index.html', name=name, products=product_list)
 
 
@@ -20,5 +19,5 @@ def about():
     return render_template('about.html')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

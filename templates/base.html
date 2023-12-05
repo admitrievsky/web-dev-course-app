@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}Online Store{% endblock %}</title>
-    <link href="static/style.css" rel="stylesheet">
-    <script src="static/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>{% block title %}Online Store{% endblock %}</title>
   </head>
 
   <body>
@@ -17,13 +16,13 @@
       </nav>
       <h1>Online Store</h1>
     </header>
-    <div class="main-wrapper">
-      <main>
-        {% block content %}{% endblock %}
-      </main>
-    </div>
+      <div class="main-wrapper">
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+      </div>
     <footer>
-      <p>Thanks for visiting our store!</p>
+        <p>Thanks for visiting our store!</p>
     </footer>
   </body>
 </html>
